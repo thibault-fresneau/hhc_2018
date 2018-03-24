@@ -18,8 +18,8 @@
   </head>
 
   <body>
-
-    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+    
+    <!-- <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -41,15 +41,31 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
-    </nav>
+    </nav> --> 
 
-    <div class="container">
-      <div class="jumbotron">
+    <div class="container-fluid" style="max-width: 36rem;">
+      <div class="row">
+        
+        <div class="card-body">
+          <h5 class="card-title">Bonjour ! Votre objectif le plus récent est :</h5>
+          <p class="card-text">"Sortir mon chien entre 17h et 18h."</p>
+          <div class="col-md-4 block">
+            <button type="submit" class="circle" data-target="/page1.html">
+            Voir Compagnon
+            </button>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container">
+      <div class="jumbotron"><<<
         <h1>Navbar example</h1>
         <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser's viewport.</p>
         <a class="btn btn-lg btn-primary" href="../../components/navbar/" role="button">View navbar docs &raquo;</a>
       </div>
-    </div>
+    </div> -->
 
 
     <!-- Bootstrap core JavaScript
@@ -59,7 +75,15 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+    <script>
+        $('.circle').on('click', function(event) {
+        event.preventDefault(); 
+        var url = $(this).data('target');
+        location.replace(url);
+        console.log("test");
+        });
+        </script>    
   </body>
 </html>
