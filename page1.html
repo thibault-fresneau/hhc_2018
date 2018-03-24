@@ -10,15 +10,16 @@
     <title>Fixed top navbar example for Bootstrap</title>
     
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="ext/bootstrap-slider.min.css" rel="stylesheet">
+    
     <!-- Custom styles for this template -->
     <link href="page1.css" rel="stylesheet">
   </head>
 
   <body>
     <div class="container-fluid">
-        <div id="tophide" class="row align-items-center placeholder"></div>
-        <div id="gauges" class="row align-items-center">
+        <div id="tophide" class="row placeholder"></div>
+        <div id="gauges" class="row align-items-start">
         <div class="col">
                 <div class="GaugeMeter" id="PreviewGaugeMeter_1" data-percent="80" data-text="<font style='color:#2980B9;font-size:35px;letter-spacing:-1px'>5</font>" data-append="<font style='color:white'></font>" data-size="100" data-theme="#2980B9" data-back="RGBa(0,0,0,.1)" data-width="15" data-label="phy" data-style="Arch" data-label_color="#FFF"></div>
         </div>
@@ -27,13 +28,16 @@
                         <div class="GaugeMeter" id="PreviewGaugeMeter_2" data-percent="80" data-text="<font style='color:#2980B9;font-size:35px;letter-spacing:-1px'>5</font>" data-append="<font style='color:white'></font>" data-size="100" data-theme="#2980B9" data-back="RGBa(0,0,0,.1)" data-width="15" data-label="phy" data-style="Arch" data-label_color="#FFF"></div>
                 </div>
 
-
-
                 <div class="col">
                         <div class="GaugeMeter" id="PreviewGaugeMeter_3" data-percent="80" data-text="<font style='color:#2980B9;font-size:35px;letter-spacing:-1px'>5</font>" data-append="<font style='color:white'></font>" data-size="100" data-theme="#2980B9" data-back="RGBa(0,0,0,.1)" data-width="15" data-label="phy" data-style="Arch" data-label_color="#FFF"></div>
                 </div>
           </div>
-                <div class="row align-items-center placeholder"></div>
+                <div class="row placeholder question">
+                  <div class="col"><p>Fatigue</p></div>
+                  <div>
+                    <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                  </div>
+                </div>
           
   </div>
 
@@ -44,6 +48,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="ext/GaugeMeter.js"></script>
+    <script src="ext/bootstrap-slider.min.js"></script>
 
 
     <script>
@@ -54,10 +59,11 @@
       $(".GaugeMeter").gaugeMeter();  
       $( "#gauges" ).click(function() {
           $( "#tophide" ).slideUp( "slow", function() {
-  });
-});
+          });
+      });
+      $("#ex1").slider({});
 
-            });
+    });
 
 
         
