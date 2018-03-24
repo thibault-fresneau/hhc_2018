@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fixed top navbar example for Bootstrap</title>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="page1.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+        <div id="tophide" class="row align-items-center placeholder"></div>
+        <div id="gauges" class="row align-items-center">
+        <div class="col">
+                <div class="GaugeMeter" id="PreviewGaugeMeter_1" data-percent="80" data-text="<font style='color:#2980B9;font-size:35px;letter-spacing:-1px'>5</font>" data-append="<font style='color:white'></font>" data-size="100" data-theme="#2980B9" data-back="RGBa(0,0,0,.1)" data-width="15" data-label="phy" data-style="Arch" data-label_color="#FFF"></div>
+        </div>
+
+                <div class="col">
+                        <div class="GaugeMeter" id="PreviewGaugeMeter_2" data-percent="80" data-text="<font style='color:#2980B9;font-size:35px;letter-spacing:-1px'>5</font>" data-append="<font style='color:white'></font>" data-size="100" data-theme="#2980B9" data-back="RGBa(0,0,0,.1)" data-width="15" data-label="phy" data-style="Arch" data-label_color="#FFF"></div>
+                </div>
+
+
+
+                <div class="col">
+                        <div class="GaugeMeter" id="PreviewGaugeMeter_3" data-percent="80" data-text="<font style='color:#2980B9;font-size:35px;letter-spacing:-1px'>5</font>" data-append="<font style='color:white'></font>" data-size="100" data-theme="#2980B9" data-back="RGBa(0,0,0,.1)" data-width="15" data-label="phy" data-style="Arch" data-label_color="#FFF"></div>
+                </div>
+          </div>
+                <div class="row align-items-center placeholder"></div>
+          
+  </div>
+
+      <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="ext/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="ext/GaugeMeter.js"></script>
+
+
+    <script>
+      if(jQuery){
+        console.log('yes');
+      }
+    $(document).ready(function(){
+      $(".GaugeMeter").gaugeMeter();  
+      $( "#gauges" ).click(function() {
+          $( "#tophide" ).slideUp( "slow", function() {
+  });
+});
+
+            });
+
+
+        
+        </script>
+
+
+  </body>
+  </html>
